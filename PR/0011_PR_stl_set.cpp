@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-main()
+int main()
 {
     int n;
     cin >> n;
@@ -46,5 +46,6 @@ main()
                 cout << s.size() << " ";
             }
         }
+        cout << "\n";
     }
 }

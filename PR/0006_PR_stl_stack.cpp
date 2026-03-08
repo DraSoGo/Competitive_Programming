@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-main()
+int main()
 {
     int a,b,c;
     char d;
     cin >> a;
-    stack <int> STR;
     for (int i = 0; i < a; i++)
     {
+        stack <int> STR;
         cin >> b;
         for (int j = 0; j < b; j++)
         {
@@ -31,7 +31,7 @@ main()
             }
             else if (d == 'c')
             {
-                cout << STR.size();
+                cout << STR.size() << " ";
             }
             else if (d == 'd')
             {

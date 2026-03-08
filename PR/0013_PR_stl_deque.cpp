@@ -18,7 +18,7 @@ void showdq (deque <int> d)
     
     cout << "\n";
 }
-main()
+int main()
 {
     int n;
     cin >> n;
@@ -47,18 +47,39 @@ main()
             }
             else if (a == 3)
             {
-                de.pop_front();
-                showdq(de);
+                if (!de.empty())
+                {
+                    de.pop_front();
+                    showdq(de);
+                }
+                else
+                {
+                    cout << -1 << "\n";
+                }
             }
             else if (a == 4)
             {
-                de.pop_back();
-                showdq(de);
+                if (!de.empty())
+                {
+                    de.pop_back();
+                    showdq(de);
+                }
+                else
+                {
+                    cout << -1 << "\n";
+                }
             }
             else if (a == 5)
             {
-                sort(de.begin(),de.end());          
-                showdq(de);
+                if (!de.empty())
+                {
+                    sort(de.begin(),de.end());          
+                    showdq(de);
+                }
+                else
+                {
+                    cout << -1 << "\n";
+                }
             }
             else if (a == 6)
             {
@@ -76,7 +97,14 @@ main()
             }
             else if (a == 7)
             {
-                showdq(de);
+                if (!de.empty())
+                {
+                    showdq(de);
+                }
+                else
+                {
+                    cout << -1 << "\n";
+                }
             }
             else if (a == 8)
             {
@@ -107,4 +135,5 @@ main()
             }
         }
     }
+    return 0;
 }

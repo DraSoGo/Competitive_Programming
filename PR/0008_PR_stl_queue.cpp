@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-main()
+int main()
 {
     int a,b,c;
     char d;
     cin >> a;
-    queue <int> QU;
     for (int i = 0; i < a; i++)
     {
+        queue <int> QU;
         cin >> b;
         for (int j = 0; j < b; j++)
         {

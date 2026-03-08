@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-main()
+int main()
 {
     int n;
     cin >> n;
@@ -53,5 +53,6 @@ main()
                 sort(s.begin(),s.end(),greater<int>());
             }
         }
+        cout << "\n";
     }
 }

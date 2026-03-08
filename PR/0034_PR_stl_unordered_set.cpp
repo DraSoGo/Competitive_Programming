@@ -3,9 +3,10 @@ using namespace std;
 int main() 
 {
     int a,b;
-    cin >> a >> b;
+    cin >> a;
     for (int i = 0; i < a; i++)
     {
+        cin >> b;
         unordered_set <int> A;
         for (int i = 0; i < b; i++)
         {
