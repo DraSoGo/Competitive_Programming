@@ -3,21 +3,22 @@ using namespace std;
 int main()
 {
     ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int n,co = 0,idx = 3;
-    int A[4] = {1,2,5,10};
-    cin >> n;
-    while (n > 0)
+    int n,co,idx = 8,q;
+    int A[9] = {1,2,5,10,20,50,100,500,1000};
+    cin >> q;
+    while (q--)
     {
-        n -= A[idx];
-        co++;
-        if (n < 0)
+        co = 0;
+        cin >> n;
+        for (int i = idx; i >= 0; i--)
         {
-            co--;
-            n += A[idx];
-            idx--;
+            if (A[i] <= n)
+            {
+                co += (n/A[i]);
+                n %= A[i];
+            }
         }
-        // cout << n << " " << co << "\n";
+        cout << co << "\n";
     }
-    cout << co;
     return 0;
 }
