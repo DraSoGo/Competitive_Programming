@@ -23,7 +23,7 @@ void showpq (priority_queue <int> d)
     }
     cout << "\n";
 }
-main()
+int main()
 {
     int n;
     cin >> n;
@@ -61,4 +61,5 @@ main()
             }
         }
     }
+    return 0;
 }

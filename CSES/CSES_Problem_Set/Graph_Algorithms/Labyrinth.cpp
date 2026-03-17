@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+ 
 const int sz = 1e3 + 1;
 int n, m;
 int di[4] = {0,0,1,-1};
@@ -10,7 +10,7 @@ char T[sz][sz];
 vector <pair<int,int>> V;
 bool vis[sz][sz];
 queue <pair<int,int>> Q;
-
+ 
 bool chek(int i,int j)
 {
     if (T[i][j] == '#' || i < 0 || j < 0 || i >= n || j >= m || vis[i][j])
@@ -19,7 +19,7 @@ bool chek(int i,int j)
     }
     return 1;
 }
-
+ 
 int BFS()
 {
     Q.push({st.first,st.second});
@@ -39,8 +39,8 @@ int BFS()
                     V.push_back({ii,jj});
                     // cout << ii << " " << jj << " " << par[ii][jj].first << " " << par[ii][jj].second << " , ";
                     int a = par[ii][jj].first,b = par[ii][jj].second;
-                    ii = par[ii][jj].first;
-                    jj = par[ii][jj].second;
+                    ii = a;
+                    jj = b;
                     // cout << ii << " " << jj << "\n";
                     // cout << a << " " << b << "\n";
                 }
@@ -69,7 +69,7 @@ int BFS()
     }
     return -1;
 }
-
+ 
 int main()
 {
     ios::sync_with_stdio(0);
@@ -116,30 +116,7 @@ int main()
         cout << "NO";
         return 0;
     }
-    cout << "YES\n" << step << "\n";
-    for (int i = V.size()-1; i >= 1; i--)
-    {
-        // cout << V[i].first << "," << V[i].second << "\n";
-        int ci = V[i].first - V[i-1].first;
-        int cj = V[i].second - V[i-1].second;
-        if (ci == 1 && cj == 0)
-        {
-            cout << "U";
-        }
-        else if (ci == -1 && cj == 0)
-        {
-            cout << "D";
-        }
-        else if (ci == 0 && cj == 1)
-        {
-            cout << "L";
-        }
-        else
-        {
-            cout << "R";
-        }
-        
-    }
+    cout << "YES\n" << step;
     // cout << par[2][1].first << " " << par[2][1].second; 
     return 0;
 }
